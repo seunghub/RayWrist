@@ -5,6 +5,7 @@
 **Seunghun Baek<sup>\*</sup> · Minjae Lee<sup>\*</sup> · Won Hwa Kim**  
 <sup>\* Equal contribution.</sup>
 
+[![Project Page](https://img.shields.io/badge/Project-Page-2563EB.svg)](https://seunghub.github.io/RayWrist-page/)
 [![arXiv](https://img.shields.io/badge/arXiv-Paper-b31b1b.svg)](https://arxiv.org/abs/XXXX.XXXXX)
 [![Python](https://img.shields.io/badge/Python-3.10--3.12-3776AB.svg?logo=python&logoColor=white)](#installation)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.9-EE4C2C.svg?logo=pytorch&logoColor=white)](docs/gr00t.md)
@@ -12,7 +13,7 @@
 [![Task](https://img.shields.io/badge/Task-Robotic%20Manipulation-258A91.svg)](#method)
 [![License](https://img.shields.io/badge/License-Apache%202.0-708090.svg)](#license)
 
-**[📄 Paper](https://arxiv.org/abs/XXXX.XXXXX) · [🎬 Full Video](overview.mp4) · [🛠️ Installation](#installation) · [🤖 RoboCasa](#robocasa) · [📚 Citation](#citation)**
+**[🌐 Project Page](https://seunghub.github.io/RayWrist-page/) · [📄 Paper](https://arxiv.org/abs/XXXX.XXXXX) · [🛠️ Installation](#installation) · [📚 Citation](#citation)**
 
 [![RayWrist method overview: all ten stages from missing wrist stream to completed tokens](assets/overview.gif)](overview.mp4)
 
