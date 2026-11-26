@@ -1,9 +1,10 @@
 <div align="center">
 
-## RayWrist: Geometry-Guided Wrist-Token Completion<br>for Frozen Vision-Language-Action Models
+# RayWrist
+### Geometry-Guided Wrist-Token Completion<br>for Frozen Vision-Language-Action Models
 
-**Seunghun Baek<sup>\*</sup> · Minjae Lee<sup>\*</sup> · Won Hwa Kim**  
-<sup>* Equal contribution.</sup>
+**Seunghun Baek<sup>†</sup> · Minjae Lee<sup>†</sup> · Won Hwa Kim**  
+<sup>† Equal contribution.</sup>
 
 [![arXiv](https://img.shields.io/badge/arXiv-Paper-b31b1b.svg)](https://arxiv.org/abs/XXXX.XXXXX)
 [![Python](https://img.shields.io/badge/Python-3.10--3.12-3776AB.svg?logo=python&logoColor=white)](#installation)
@@ -26,7 +27,11 @@
 
 ## ✨ Method
 
-**RayWrist completes missing wrist tokens while keeping the pretrained visual encoder and policy frozen.** A tool-centered crop from the retained external RGB view supplies contextual queries and a 3D tool-frame feature grid. A learned readout samples this grid along nominal wrist-camera rays and writes completed tokens into the policy's native visual interface.
+**For missing-wrist adaptation, RayWrist completes wrist tokens while keeping the pretrained visual encoder and policy frozen.**
+
+[![RayWrist teaser: tool-centered cropping, a tool-frame feature grid, wrist-ray sampling, and native wrist-token prediction](assets/teaser.png)](assets/teaser.png)
+
+A tool-centered crop from the retained external RGB view supplies contextual queries and a 3D tool-frame feature grid. Ray attention refines each query using grid samples and a learned null token; native writers produce the completed wrist features.
 
 Deployment uses retained RGB observations, physical robot state, and camera calibration. Retained views follow their original path, and independent wrist adapters can be enabled as needed. We also study joint head-camera-only learning on RoboCasa, where readers and the native action fine-tuning scope are optimized together.
 
@@ -66,16 +71,16 @@ The backbone guides contain loading, inference, and training examples. Pretraine
 
 ## 🤖 Head-Camera-Only Learning on RoboCasa
 
-RayWrist also supports joint policy learning when the dataset provides head RGB without wrist cameras. On RoboCasa GR1 Tabletop, physical end-effector poses select two local crops from the head view. Independent left and right readers lift these features into their tool-frame grids and produce virtual-wrist tokens alongside the retained head-view tokens.
+RayWrist also supports joint policy learning when the dataset provides head RGB without wrist cameras. On RoboCasa GR1 Tabletop, physical end-effector poses select two local crops from the head view. Virtual wrist cameras have fixed poses in the tool frames and use the head-camera intrinsics for ray construction. Independent left and right readers produce virtual-wrist tokens alongside the retained head-view tokens.
 
-We train both readers with GR00T's native projector and action modules for 30,000 updates, keeping vision and language frozen. This setting uses the native action objective without a wrist-image teacher.
+Both methods start from the same GR00T N1.7 base checkpoint and train for 30,000 updates. With RayWrist, the two readers, native projector, conditioning normalization, and action modules are optimized together from the first update; vision and language stay frozen. This setting uses action supervision without a wrist-image teacher.
 
 | Method | Successes across 24 tasks | Success rate |
 | --- | ---: | ---: |
 | Native head-only FT | 394 / 1,200 | 32.83% |
 | FT + RayWrist | 453 / 1,200 | **37.75%** |
 
-The paper evaluates 50 episodes per task and reports a **4.92-point improvement**. The [RoboCasa guide](docs/robocasa.md) covers native preprocessing, virtual-wrist geometry, joint training, checkpoint loading, inference, and the task-level breakdown.
+The paper evaluates 50 episodes per task and reports a **4.92 percentage-point improvement**. The [RoboCasa guide](docs/robocasa.md) covers native preprocessing, virtual-wrist geometry, joint training, checkpoint loading, inference, and the task-level breakdown.
 
 ```bash
 torchrun --standalone --nproc-per-node=4 scripts/train_robocasa.py \
