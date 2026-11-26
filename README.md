@@ -27,7 +27,7 @@
 
 ## ✨ Method
 
-**For missing-wrist adaptation, RayWrist completes wrist tokens while keeping the pretrained visual encoder and policy frozen.**
+**For missing-wrist adaptation, RayWrist completes wrist tokens while keeping the pretrained VLA frozen.**
 
 [![RayWrist teaser: tool-centered cropping, a tool-frame feature grid, wrist-ray sampling, and native wrist-token prediction](assets/teaser.png)](assets/teaser.png)
 
