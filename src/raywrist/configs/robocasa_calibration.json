@@ -1,0 +1,1055 @@
+{
+  "schema": "ROBOCASA_GR1_RAYWRIST_CALIBRATION_V1",
+  "camera": {
+    "body": "head_pitch",
+    "pos": [
+      0.22982821999999994,
+      -2.7755575615628914e-17,
+      0.09050000000000002
+    ],
+    "quat_wxyz": [
+      0.676,
+      0.205,
+      -0.205,
+      -0.676
+    ],
+    "fovy_deg": 77,
+    "raw_hw": [
+      800,
+      1280
+    ]
+  },
+  "processed_image": {
+    "hw": [
+      256,
+      256
+    ],
+    "crop_yxyx": [
+      310,
+      770,
+      110,
+      1130
+    ],
+    "first_resize_hw": [
+      480,
+      720
+    ],
+    "vertical_padding": 120,
+    "final_resize_hw": [
+      256,
+      256
+    ],
+    "coordinate_convention": "continuous pixel-edge, optical top-left"
+  },
+  "crop": {
+    "size": 96,
+    "out_hw": 256,
+    "black_padding": true,
+    "clamp_center": false,
+    "rotation": false
+  },
+  "chains": {
+    "camera": [
+      {
+        "name": "base",
+        "pos": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "quat": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joints": []
+      },
+      {
+        "name": "whole_body",
+        "pos": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "quat": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joints": []
+      },
+      {
+        "name": "torso_waist_yaw",
+        "pos": [
+          0.0,
+          0.0,
+          0.0065
+        ],
+        "quat": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joints": [
+          {
+            "name": "torso_waist_yaw",
+            "axis": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "pos": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "type": "hinge"
+          }
+        ]
+      },
+      {
+        "name": "torso_waist_pitch",
+        "pos": [
+          0.0,
+          0.0,
+          0.055
+        ],
+        "quat": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joints": [
+          {
+            "name": "torso_waist_pitch",
+            "axis": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "pos": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "type": "hinge"
+          }
+        ]
+      },
+      {
+        "name": "torso_waist_roll",
+        "pos": [
+          0.0,
+          0.0,
+          0.085
+        ],
+        "quat": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joints": [
+          {
+            "name": "torso_waist_roll",
+            "axis": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "pos": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "type": "hinge"
+          }
+        ]
+      },
+      {
+        "name": "head_yaw",
+        "pos": [
+          0.001,
+          -0.00022551,
+          0.295
+        ],
+        "quat": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joints": [
+          {
+            "name": "head_yaw",
+            "axis": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "pos": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "type": "hinge"
+          }
+        ]
+      },
+      {
+        "name": "head_roll",
+        "pos": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "quat": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joints": [
+          {
+            "name": "head_roll",
+            "axis": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "pos": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "type": "hinge"
+          }
+        ]
+      },
+      {
+        "name": "head_pitch",
+        "pos": [
+          0.0,
+          5.373e-05,
+          0.036
+        ],
+        "quat": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joints": [
+          {
+            "name": "head_pitch",
+            "axis": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "pos": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "type": "hinge"
+          }
+        ]
+      }
+    ],
+    "left": [
+      {
+        "name": "base",
+        "pos": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "quat": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joints": []
+      },
+      {
+        "name": "whole_body",
+        "pos": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "quat": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joints": []
+      },
+      {
+        "name": "torso_waist_yaw",
+        "pos": [
+          0.0,
+          0.0,
+          0.0065
+        ],
+        "quat": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joints": [
+          {
+            "name": "torso_waist_yaw",
+            "axis": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "pos": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "type": "hinge"
+          }
+        ]
+      },
+      {
+        "name": "torso_waist_pitch",
+        "pos": [
+          0.0,
+          0.0,
+          0.055
+        ],
+        "quat": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joints": [
+          {
+            "name": "torso_waist_pitch",
+            "axis": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "pos": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "type": "hinge"
+          }
+        ]
+      },
+      {
+        "name": "torso_waist_roll",
+        "pos": [
+          0.0,
+          0.0,
+          0.085
+        ],
+        "quat": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joints": [
+          {
+            "name": "torso_waist_roll",
+            "axis": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "pos": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "type": "hinge"
+          }
+        ]
+      },
+      {
+        "name": "left_arm_mount",
+        "pos": [
+          0.0,
+          0.12661,
+          0.21727
+        ],
+        "quat": [
+          0.976289,
+          0.216473,
+          0.0,
+          0.0
+        ],
+        "joints": []
+      },
+      {
+        "name": "l_upper_arm_pitch",
+        "pos": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "quat": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joints": [
+          {
+            "name": "l_shoulder_pitch",
+            "axis": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "pos": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "type": "hinge"
+          }
+        ]
+      },
+      {
+        "name": "l_upper_arm_roll",
+        "pos": [
+          0.0,
+          0.067,
+          0.0
+        ],
+        "quat": [
+          0.976289,
+          -0.216473,
+          0.0,
+          0.0
+        ],
+        "joints": [
+          {
+            "name": "l_shoulder_roll",
+            "axis": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "pos": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "type": "hinge"
+          }
+        ]
+      },
+      {
+        "name": "l_upper_arm_yaw",
+        "pos": [
+          0.0,
+          0.040004,
+          -0.057502
+        ],
+        "quat": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joints": [
+          {
+            "name": "l_shoulder_yaw",
+            "axis": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "pos": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "type": "hinge"
+          }
+        ]
+      },
+      {
+        "name": "l_lower_arm_pitch",
+        "pos": [
+          0.0,
+          1.28869e-05,
+          -0.188546
+        ],
+        "quat": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joints": [
+          {
+            "name": "l_elbow_pitch",
+            "axis": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "pos": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "type": "hinge"
+          }
+        ]
+      },
+      {
+        "name": "l_hand_yaw",
+        "pos": [
+          0.0,
+          0.0,
+          -0.0405043
+        ],
+        "quat": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joints": [
+          {
+            "name": "l_wrist_yaw",
+            "axis": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "pos": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "type": "hinge"
+          }
+        ]
+      },
+      {
+        "name": "l_hand_roll",
+        "pos": [
+          0.0,
+          1.3775e-05,
+          -0.20155
+        ],
+        "quat": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joints": [
+          {
+            "name": "l_wrist_roll",
+            "axis": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "pos": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "type": "hinge"
+          }
+        ]
+      },
+      {
+        "name": "l_hand_pitch",
+        "pos": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "quat": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joints": [
+          {
+            "name": "l_wrist_pitch",
+            "axis": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "pos": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "type": "hinge"
+          }
+        ]
+      },
+      {
+        "name": "left_eef",
+        "pos": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "quat": [
+          0.707107,
+          0.0,
+          0.0,
+          0.707107
+        ],
+        "joints": []
+      }
+    ],
+    "right": [
+      {
+        "name": "base",
+        "pos": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "quat": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joints": []
+      },
+      {
+        "name": "whole_body",
+        "pos": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "quat": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joints": []
+      },
+      {
+        "name": "torso_waist_yaw",
+        "pos": [
+          0.0,
+          0.0,
+          0.0065
+        ],
+        "quat": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joints": [
+          {
+            "name": "torso_waist_yaw",
+            "axis": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "pos": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "type": "hinge"
+          }
+        ]
+      },
+      {
+        "name": "torso_waist_pitch",
+        "pos": [
+          0.0,
+          0.0,
+          0.055
+        ],
+        "quat": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joints": [
+          {
+            "name": "torso_waist_pitch",
+            "axis": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "pos": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "type": "hinge"
+          }
+        ]
+      },
+      {
+        "name": "torso_waist_roll",
+        "pos": [
+          0.0,
+          0.0,
+          0.085
+        ],
+        "quat": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joints": [
+          {
+            "name": "torso_waist_roll",
+            "axis": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "pos": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "type": "hinge"
+          }
+        ]
+      },
+      {
+        "name": "right_arm_mount",
+        "pos": [
+          0.0,
+          -0.12664,
+          0.21725
+        ],
+        "quat": [
+          0.976303,
+          -0.216409,
+          0.0,
+          0.0
+        ],
+        "joints": []
+      },
+      {
+        "name": "r_upper_arm_pitch",
+        "pos": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "quat": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joints": [
+          {
+            "name": "r_shoulder_pitch",
+            "axis": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "pos": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "type": "hinge"
+          }
+        ]
+      },
+      {
+        "name": "r_upper_arm_roll",
+        "pos": [
+          0.0,
+          -0.067,
+          0.0
+        ],
+        "quat": [
+          0.976303,
+          0.216409,
+          0.0,
+          0.0
+        ],
+        "joints": [
+          {
+            "name": "r_shoulder_roll",
+            "axis": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "pos": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "type": "hinge"
+          }
+        ]
+      },
+      {
+        "name": "r_upper_arm_yaw",
+        "pos": [
+          0.0,
+          -0.039996,
+          -0.057473
+        ],
+        "quat": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joints": [
+          {
+            "name": "r_shoulder_yaw",
+            "axis": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "pos": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "type": "hinge"
+          }
+        ]
+      },
+      {
+        "name": "r_lower_arm_pitch",
+        "pos": [
+          0.0,
+          1.28859e-05,
+          -0.18853
+        ],
+        "quat": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joints": [
+          {
+            "name": "r_elbow_pitch",
+            "axis": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "pos": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "type": "hinge"
+          }
+        ]
+      },
+      {
+        "name": "r_hand_yaw",
+        "pos": [
+          0.0,
+          0.0,
+          -0.0405
+        ],
+        "quat": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joints": [
+          {
+            "name": "r_wrist_yaw",
+            "axis": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "pos": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "type": "hinge"
+          }
+        ]
+      },
+      {
+        "name": "r_hand_roll",
+        "pos": [
+          0.0,
+          1.3775e-05,
+          -0.20153
+        ],
+        "quat": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joints": [
+          {
+            "name": "r_wrist_roll",
+            "axis": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "pos": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "type": "hinge"
+          }
+        ]
+      },
+      {
+        "name": "r_hand_pitch",
+        "pos": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "quat": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "joints": [
+          {
+            "name": "r_wrist_pitch",
+            "axis": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "pos": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "type": "hinge"
+          }
+        ]
+      },
+      {
+        "name": "right_eef",
+        "pos": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "quat": [
+          -0.707107,
+          0.0,
+          0.0,
+          0.707107
+        ],
+        "joints": []
+      }
+    ]
+  },
+  "state_order": {
+    "left_arm": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "left_hand": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "right_arm": [
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "right_hand": [
+      20,
+      21,
+      22,
+      23,
+      24,
+      25
+    ],
+    "waist": [
+      26,
+      27,
+      28
+    ]
+  },
+  "joint_order": {
+    "left": [
+      "l_shoulder_pitch",
+      "l_shoulder_roll",
+      "l_shoulder_yaw",
+      "l_elbow_pitch",
+      "l_wrist_yaw",
+      "l_wrist_roll",
+      "l_wrist_pitch"
+    ],
+    "right": [
+      "r_shoulder_pitch",
+      "r_shoulder_roll",
+      "r_shoulder_yaw",
+      "r_elbow_pitch",
+      "r_wrist_yaw",
+      "r_wrist_roll",
+      "r_wrist_pitch"
+    ],
+    "waist": [
+      "torso_waist_yaw",
+      "torso_waist_pitch",
+      "torso_waist_roll"
+    ]
+  }
+}

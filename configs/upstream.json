@@ -1,0 +1,29 @@
+{
+  "gr00t": {
+    "repository": "https://github.com/NVIDIA/Isaac-GR00T.git",
+    "commit": "d2b7e75b937e3ec9aa5dbc798f08b89692c49734",
+    "python": "3.12",
+    "files": {
+      "pyproject.toml": "a451af4cf723cc58b710a2f6f3a12a8d7f03850a39cc5ba420a18fcc20e2a3d0",
+      "gr00t/model/modules/qwen3_backbone.py": "e3902c8385d586fb9f079abf58d37795cbcefc55f2f506f761c4b78a5afbaf52",
+      "gr00t/model/gr00t_n1d7/gr00t_n1d7.py": "6bd66ef768f1484ac5a7889c40358a599f1862b1d554d47d357e113f2f96501c",
+      "LICENSE": "93363510f62ce25ad1a47605b0b06ab335edd82f1a444531c58dd30b6e5a5a0c",
+      "gr00t/model/gr00t_n1d7/processing_gr00t_n1d7.py": "77fd0e1f6972cdcf0334f18f2e84724629f6746612721b6b27135ccb23f00b3f",
+      "gr00t/data/dataset/factory.py": "ed5fb989d2ef66b9e21b0471d47959277e9aef6b6b16bffcbe5f7c7238dcc389",
+      "gr00t/experiment/trainer.py": "10701c09cb0aacae75f8d9a764d0e83bdddef5b06c8126152cad8b6d7b4a1616",
+      "gr00t/policy/gr00t_policy.py": "ad1183a3ce1ebed6cace4a9cb8c5a123e823a0760ebf46f3694639a5ad1521ec",
+      "gr00t/policy/server_client.py": "d29d2e68e97ceae1762243315f23f22e696538da60fecd87d9a1391d20f7f1b9"
+    }
+  },
+  "openpi": {
+    "repository": "https://github.com/Physical-Intelligence/openpi.git",
+    "commit": "215abfb217dbac7d5f1273282331b9b1866c0479",
+    "python": "3.11",
+    "files": {
+      "pyproject.toml": "e1f457bd81622a47a4c4de17b92815977ac5fcd40116bec92398eb400bf76483",
+      "src/openpi/models/pi0.py": "24b32d7c6ed5e409459afa8ca5af96a4dae09c2dcdf48e828907e411f4f12342",
+      "src/openpi/models/siglip.py": "14b4df0be280d5769fb0dc31a40cde27525dbb1980cc998c28475d62fa3cad32",
+      "LICENSE": "43070e2d4e532684de521b885f385d0841030efa2b1a20bafb76133a5e1379c1"
+    }
+  }
+}

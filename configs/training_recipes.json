@@ -1,0 +1,119 @@
+{
+  "pi05_adaptation": {
+    "updates": 10000,
+    "global_batch": 256,
+    "training_seed": 2029,
+    "optimizer": "AdamW",
+    "peak_lr": 5e-05,
+    "final_lr": 5e-06,
+    "warmup_updates": 500,
+    "schedule": "cosine",
+    "betas": [
+      0.9,
+      0.95
+    ],
+    "eps": 1e-08,
+    "weight_decay": 1e-10,
+    "gradient_clip": 1,
+    "ema_decay": 0.999,
+    "alignment_weight": 1,
+    "trainable_scope": "reader parameters only",
+    "parameter_dtype": "float32",
+    "recipient_dtype": "bfloat16",
+    "checkpoint": "final scheduled EMA",
+    "action_horizon": {
+      "LIBERO": 10,
+      "RoboTwin": 50
+    },
+    "sampler": "native Euler10"
+  },
+  "gr00t_libero": {
+    "suites": [
+      "libero_10",
+      "libero_spatial",
+      "libero_object",
+      "libero_goal"
+    ],
+    "updates": 10000,
+    "global_batch": 640,
+    "microbatch": 160,
+    "accumulation": 4,
+    "training_seed": 0,
+    "optimizer": "AdamW",
+    "peak_lr": 0.0001,
+    "final_lr": 0,
+    "warmup_updates": 500,
+    "schedule": "cosine",
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "weight_decay": 1e-05,
+    "gradient_clip": 1,
+    "alignment_weight": 1,
+    "state_dropout": 0.2,
+    "trainable_scope": "reader parameters only",
+    "parameter_dtype": "float32",
+    "recipient_dtype": "bfloat16",
+    "checkpoint": "final scheduled reader"
+  },
+  "gr00t_so101": {
+    "updates": 10000,
+    "global_batch": 32,
+    "training_seed": 42,
+    "reader_initialization_seeds": [
+      2029,
+      2030
+    ],
+    "optimizer": "AdamW",
+    "peak_lr": 0.0001,
+    "final_lr": 0,
+    "warmup_updates": 500,
+    "schedule": "cosine",
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "weight_decay": 1e-05,
+    "gradient_clip": 1,
+    "alignment_weight": 1,
+    "processor_state_dropout": 0.2,
+    "flow_state_dropout": 0.2,
+    "trainable_scope": "reader parameters only",
+    "parameter_dtype": "float32",
+    "recipient_dtype": "bfloat16",
+    "checkpoint": "final scheduled readers"
+  },
+  "gr00t_robocasa": {
+    "updates": 30000,
+    "global_batch": 512,
+    "devices": 4,
+    "microbatch_per_device": 32,
+    "accumulation": 4,
+    "training_seed": 42,
+    "reader_initialization_seeds": [
+      42,
+      43
+    ],
+    "optimizer": "AdamW",
+    "peak_lr": 0.0001,
+    "final_lr": 0,
+    "warmup_updates": 1500,
+    "schedule": "cosine",
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "weight_decay": 1e-05,
+    "gradient_clip": 1,
+    "alignment_weight": 0,
+    "trainable_scope": "two independent readers and native action fine-tuning scope",
+    "frozen_scope": "vision and language",
+    "reader_parameter_dtype": "float32",
+    "checkpoint": "final scheduled model",
+    "wrist_teacher": false
+  }
+}

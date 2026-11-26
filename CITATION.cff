@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use RayWrist in your research, please cite the paper below."
+title: "RayWrist"
+type: software
+version: 0.1.0
+license: Apache-2.0
+authors:
+  - family-names: Baek
+    given-names: Seunghun
+  - family-names: Lee
+    given-names: Minjae
+  - family-names: Kim
+    given-names: Won Hwa
+preferred-citation:
+  type: article
+  title: "RayWrist: Geometry-Guided Wrist-Token Completion for Frozen Vision-Language-Action Models"
+  authors:
+    - family-names: Baek
+      given-names: Seunghun
+    - family-names: Lee
+      given-names: Minjae
+    - family-names: Kim
+      given-names: Won Hwa
+  year: 2026
+  journal: arXiv
+  url: "https://arxiv.org/abs/XXXX.XXXXX"

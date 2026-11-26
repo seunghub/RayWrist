@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "raywrist"
+version = "0.1.0"
+description = "Geometry-guided wrist-token completion for frozen vision-language-action models"
+readme = "README.md"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE"]
+requires-python = ">=3.10,<3.13"
+dependencies = ["numpy==1.26.4", "scipy==1.15.3", "Pillow>=11.2,<13"]
+
+[project.optional-dependencies]
+torch = ["torch>=2.7,<2.10"]
+gr00t = ["torch>=2.9,<2.10"]
+jax = ["jax==0.5.3", "flax==0.10.2"]
+test = ["pytest>=8,<10", "build>=1.2"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+raywrist = ["configs/*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

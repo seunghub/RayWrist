@@ -1,0 +1,14 @@
+RayWrist
+Copyright 2026 The RayWrist contributors.
+
+The native OpenPI prefix, attention-mask and action-flow integration follows
+Physical Intelligence's OpenPI implementation, licensed under Apache-2.0:
+https://github.com/Physical-Intelligence/openpi
+
+The GR00T interface integrates NVIDIA Isaac GR00T N1.7 and its Qwen3-VL
+feature streams. Upstream source, checkpoints and their licenses remain in
+the official repositories:
+https://github.com/NVIDIA/Isaac-GR00T
+
+This repository distributes RayWrist method code and integration utilities.
+Upstream model weights and datasets are obtained from their original sources.

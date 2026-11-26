@@ -1,0 +1,126 @@
+{
+  "embodiment": "robocasa_gr1_tabletop",
+  "condition": "ft_raywrist",
+  "head_image_key": "ego_view_bg_crop_pad_res256_freq20",
+  "crop_image_keys": [
+    "raygrid_left",
+    "raygrid_right"
+  ],
+  "dataset_directories": [
+    "gr1_unified.PnPBottleToCabinetClose",
+    "gr1_unified.PnPCanToDrawerClose",
+    "gr1_unified.PnPCupToDrawerClose",
+    "gr1_unified.PnPMilkToMicrowaveClose",
+    "gr1_unified.PnPPotatoToMicrowaveClose",
+    "gr1_unified.PnPWineToCabinetClose",
+    "gr1_unified.PosttrainPnPNovelFromCuttingboardToBasketSplitA",
+    "gr1_unified.PosttrainPnPNovelFromCuttingboardToCardboardboxSplitA",
+    "gr1_unified.PosttrainPnPNovelFromCuttingboardToPanSplitA",
+    "gr1_unified.PosttrainPnPNovelFromCuttingboardToPotSplitA",
+    "gr1_unified.PosttrainPnPNovelFromCuttingboardToTieredbasketSplitA",
+    "gr1_unified.PosttrainPnPNovelFromPlacematToBasketSplitA",
+    "gr1_unified.PosttrainPnPNovelFromPlacematToBowlSplitA",
+    "gr1_unified.PosttrainPnPNovelFromPlacematToPlateSplitA",
+    "gr1_unified.PosttrainPnPNovelFromPlacematToTieredshelfSplitA",
+    "gr1_unified.PosttrainPnPNovelFromPlateToBowlSplitA",
+    "gr1_unified.PosttrainPnPNovelFromPlateToCardboardboxSplitA",
+    "gr1_unified.PosttrainPnPNovelFromPlateToPanSplitA",
+    "gr1_unified.PosttrainPnPNovelFromPlateToPlateSplitA",
+    "gr1_unified.PosttrainPnPNovelFromTrayToCardboardboxSplitA",
+    "gr1_unified.PosttrainPnPNovelFromTrayToPlateSplitA",
+    "gr1_unified.PosttrainPnPNovelFromTrayToPotSplitA",
+    "gr1_unified.PosttrainPnPNovelFromTrayToTieredbasketSplitA",
+    "gr1_unified.PosttrainPnPNovelFromTrayToTieredshelfSplitA"
+  ],
+  "data": {
+    "allow_padding": false,
+    "episode_sampling_rate": 0.1,
+    "num_shards_per_epoch": 100000,
+    "shard_size": 1024,
+    "seed": 42,
+    "ds_weights_alpha": null
+  },
+  "geometry": {
+    "source_crop_pixels": 96,
+    "source_image_hw": [
+      256,
+      256
+    ],
+    "reader_image_hw": [
+      256,
+      256
+    ],
+    "origin_in_ee_m": [
+      0.0,
+      0.0,
+      -0.06
+    ],
+    "forward_frame": "grip",
+    "volume_frame": "virtual",
+    "query_intrinsics": "raw head-camera intrinsics",
+    "query_hw": [
+      800,
+      1280
+    ],
+    "query_lattice": [
+      8,
+      8
+    ],
+    "ray_samples": 16,
+    "grid_shape": [
+      8,
+      8,
+      8
+    ]
+  },
+  "model": {
+    "tune_llm": false,
+    "tune_visual": false,
+    "tune_projector": true,
+    "tune_diffusion_model": true,
+    "tune_vlln": true,
+    "load_bf16": true,
+    "backbone_trainable_params_fp32": true
+  },
+  "training": {
+    "updates": 30000,
+    "global_batch": 512,
+    "devices": 4,
+    "microbatch_per_device": 32,
+    "accumulation": 4,
+    "training_seed": 42,
+    "reader_initialization_seeds": [
+      42,
+      43
+    ],
+    "optimizer": "AdamW",
+    "peak_lr": 0.0001,
+    "final_lr": 0,
+    "warmup_updates": 1500,
+    "schedule": "cosine",
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "weight_decay": 1e-05,
+    "gradient_clip": 1,
+    "alignment_weight": 0,
+    "trainable_scope": "two independent readers and native action fine-tuning scope",
+    "frozen_scope": "vision and language",
+    "reader_parameter_dtype": "float32",
+    "checkpoint": "final scheduled model",
+    "wrist_teacher": false
+  },
+  "evaluation": {
+    "tasks": 24,
+    "episodes_per_task": 50,
+    "max_episode_steps": 720,
+    "executed_action_steps": 8,
+    "active_action_dimensions": 29,
+    "native_action_horizon": 40,
+    "native_padded_action_dimensions": 132,
+    "checkpoint": "final scheduled 30000-update model",
+    "full_task_success": true
+  }
+}

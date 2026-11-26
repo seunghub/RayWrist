@@ -1,0 +1,51 @@
+{
+  "query_width": 512,
+  "decoder_blocks": 2,
+  "decoder_heads": 8,
+  "decoder_ff_width": 2048,
+  "grid_shape": [
+    8,
+    8,
+    8
+  ],
+  "grid_width": 128,
+  "volume_convolutions": 2,
+  "volume_kernel": [
+    3,
+    3,
+    3
+  ],
+  "ray_candidates": 16,
+  "null_candidates": 1,
+  "ray_heads": 4,
+  "ray_width": 128,
+  "ray_ff_width": 256,
+  "ray_output_zero_initialized": true,
+  "gr00t": {
+    "tokens": 64,
+    "native_width": 2048,
+    "native_streams": 4,
+    "memory_blocks": [
+      5,
+      11,
+      17
+    ],
+    "grid_block": 5,
+    "grid_input_width": 1024,
+    "trainable_parameters_per_reader": 15005056
+  },
+  "pi05": {
+    "tokens": 256,
+    "native_width": 2048,
+    "native_streams": 1,
+    "memory_early_blocks": [
+      5,
+      12,
+      19
+    ],
+    "memory_includes_final": true,
+    "grid_block": 5,
+    "grid_input_width": 1152,
+    "trainable_parameters_per_reader": 13746048
+  }
+}
