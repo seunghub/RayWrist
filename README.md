@@ -2,7 +2,7 @@
 
 ## RayWrist: Geometry-Guided Wrist-Token Completion<br>for Frozen Vision-Language-Action Models
 
-**Seunghun Baek<sup>*</sup> · Minjae Lee<sup>*</sup> · Won Hwa Kim**  
+**Seunghun Baek<sup>\*</sup> · Minjae Lee<sup>\*</sup> · Won Hwa Kim**  
 <sup>* Equal contribution.</sup>
 
 [![arXiv](https://img.shields.io/badge/arXiv-Paper-b31b1b.svg)](https://arxiv.org/abs/XXXX.XXXXX)
